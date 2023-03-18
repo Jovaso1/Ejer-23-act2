@@ -1,0 +1,32 @@
+package ejer.pkg23.act2;
+import java.util.Scanner;
+public class Ejer23Act2 {
+    public static void main(String[] args) {
+        double punto_x1, punto_x2, A, B, C;
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.print("Valor A:");
+        A = teclado.nextDouble();
+        
+        System.out.print("Valor B:");
+        B = teclado.nextDouble();
+        
+        System.out.print("Valor C:");
+        C = teclado.nextDouble();
+        
+        if (A !=0){
+            if((B * B)-(4*A*C) >=0){
+                punto_x1 = (-B + Math.pow(((B*B)-(4*A*C)),0.5))/2*A;
+                punto_x2 = (-B - Math.pow(((B*B)-(4*A*C)),0.5))/2*A;
+                System.out.println("Una posible solucion es " + punto_x1);
+                System.out.println("y " + punto_x2);
+            }else {
+                System.out.println("Sin solucion real.");
+            }
+        }else{
+            System.out.println("La unica solucion es: "+ -C/B);
+        }
+    }
+    
+}
+
